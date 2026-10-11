@@ -1,0 +1,24 @@
+---
+- name: Configure Apache web servers
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: Install Apache
+      ansible.builtin.dnf:
+        name: httpd
+        state: present
+
+    - name: Start and enable Apache
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: true
+
+    - name: Deploy professional portfolio website
+      ansible.builtin.copy:
+        src: website/index.html
+        dest: /var/www/html/index.html
+        owner: root
+        group: root
+        mode: '0644'

@@ -1,0 +1,37 @@
+---
+- name: Automate Linux user management
+  hosts: webservers
+  become: true
+
+  tasks:
+    - name: Create cloud engineering group
+      ansible.builtin.group:
+        name: cloudengineers
+        state: present
+
+    - name: Create three Linux user accounts
+      ansible.builtin.user:
+        name: "{{ item }}"
+        groups: cloudengineers
+        append: true
+        shell: /bin/bash
+        create_home: true
+        state: present
+      loop:
+        - engineer1
+        - engineer2
+        - engineer3
+    - name: Configure SSH access for engineer1
+      ansible.posix.authorized_key:
+        user: engineer1
+        state: present
+        key: "{{ lookup('file', lookup('env', 'HOME') + '/.ssh/aws-ansible-lab.pub') }}"
+    - name: Grant engineer1 permission to restart Apache
+      ansible.builtin.copy:
+        dest: /etc/sudoers.d/engineer1-apache
+        content: |
+          engineer1 ALL=(root) NOPASSWD: /usr/bin/systemctl restart httpd.service
+        owner: root
+        group: root
+        mode: '0440'
+        validate: '/usr/sbin/visudo -cf %s'

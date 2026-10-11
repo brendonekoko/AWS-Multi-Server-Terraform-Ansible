@@ -1,0 +1,20 @@
+# Terraform state and local files
+.terraform/
+*.tfstate
+*.tfstate.*
+tfplan
+*.tfplan
+*.tfvars
+*.tfvars.json
+
+# Local Ansible inventory
+inventory.ini
+
+# SSH private keys
+*.pem
+*.key
+aws-ansible-lab
+
+# Environment secrets
+.env
+.env.*

@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brendon Ekoko | Cloud Engineer</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #080f20;
+      color: #e9f2ff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 22px 8%;
+      border-bottom: 1px solid #20314c;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 22px;
+      color: #49c7ff;
+    }
+
+    nav a {
+      color: #c7d8ef;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover { color: #49c7ff; }
+
+    .hero {
+      padding: 110px 8% 100px;
+      background: radial-gradient(
+        ellipse at top right,
+        #173e69 0%,
+        #080f20 65%
+      );
+    }
+
+    .eyebrow {
+      color: #55d7ff;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1.12;
+      margin: 20px 0;
+      max-width: 850px;
+    }
+
+    h1 span { color: #49c7ff; }
+
+    .hero p {
+      color: #a9bfd9;
+      font-size: 19px;
+      max-width: 690px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #38bdf8;
+      color: #061426;
+      padding: 13px 25px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 20px 12px 0 0;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: #e9f2ff;
+      border: 1px solid #4b6788;
+    }
+
+    section {
+      padding: 75px 8%;
+      max-width: 1250px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      color: #a9bfd9;
+      max-width: 780px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit, minmax(250px, 1fr)
+      );
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: #111e34;
+      border: 1px solid #263c5c;
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .card h3 {
+      color: #67d2ff;
+      margin-top: 0;
+    }
+
+    .card p { color: #b6c7dc; }
+
+    .tag {
+      display: inline-block;
+      background: #183858;
+      color: #7ddcff;
+      border: 1px solid #315b80;
+      padding: 7px 13px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin: 6px 5px 0 0;
+    }
+
+    .project {
+      background: linear-gradient(
+        135deg, #122d4b, #101a2d
+      );
+      border: 1px solid #315578;
+      border-radius: 18px;
+      padding: 35px;
+      margin-top: 30px;
+    }
+
+    .project p { color: #c0d0e3; }
+
+    .steps {
+      border-left: 3px solid #38bdf8;
+      padding-left: 22px;
+      margin-top: 25px;
+    }
+
+    .steps p { margin-bottom: 18px; }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      border-top: 1px solid #20314c;
+      color: #8ea6c3;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 20px 6%; }
+      nav a { margin: 0 15px 0 0; }
+      .hero { padding: 75px 6%; }
+      section { padding: 55px 6%; }
+      .project { padding: 24px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">BE / CLOUD</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="eyebrow">
+      Cloud Infrastructure & Automation
+    </div>
+
+    <h1>
+      Hello, I'm <span>Brendon Ekoko.</span>
+      <br>Cloud Engineer.
+    </h1>
+
+    <p>
+      I build, configure, and automate cloud
+      infrastructure using AWS, Terraform,
+      Ansible, and Linux.
+    </p>
+
+    <a class="button" href="#projects">
+      Explore My Project
+    </a>
+
+    <a class="button secondary"
+       href="https://github.com/brendonekoko"
+       target="_blank" rel="noopener noreferrer">
+      View GitHub
+    </a>
+  </div>
+
+  <section id="about">
+    <div class="eyebrow">Who I Am</div>
+    <h2>About Me</h2>
+
+    <p class="subtitle">
+      I'm Brendon Ekoko, a cloud engineering
+      enthusiast with hands-on experience in
+      Linux system administration, AWS cloud
+      networking, infrastructure provisioning,
+      and configuration automation.
+    </p>
+
+    <p class="subtitle">
+      My focus is building reliable, repeatable,
+      and scalable infrastructure while applying
+      automation to reduce manual administration.
+    </p>
+  </section>
+
+  <section id="skills">
+    <div class="eyebrow">Technical Expertise</div>
+    <h2>Technologies & Skills</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Cloud Infrastructure</h3>
+        <p>
+          Amazon EC2, VPC, subnets, security
+          groups, internet gateways, IAM,
+          and AWS CLI.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Infrastructure as Code</h3>
+        <p>
+          Terraform provisioning, infrastructure
+          configuration, resource management,
+          and repeatable deployments.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Linux & Automation</h3>
+        <p>
+          Red Hat Enterprise Linux, Amazon Linux,
+          Ansible playbooks, SSH, Apache,
+          and systemd services.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="eyebrow">Featured Work</div>
+    <h2>AWS Multi-Server Infrastructure Automation</h2>
+
+    <p class="subtitle">
+      A hands-on cloud engineering project
+      demonstrating automated infrastructure
+      provisioning and server configuration.
+    </p>
+
+    <div class="project">
+      <h3>Project Overview</h3>
+
+      <p>
+        I used Terraform to provision five
+        Amazon Linux EC2 instances within a
+        custom AWS Virtual Private Cloud.
+        The environment includes a public subnet,
+        internet gateway, route table,
+        security group, and SSH key pair.
+      </p>
+
+      <p>
+        After provisioning the infrastructure,
+        I used Ansible to connect to all five
+        servers, install Apache HTTP Server,
+        manage system services, and deploy
+        a consistent website across the fleet.
+      </p>
+
+      <div class="steps">
+        <p>
+          <strong>01 — Provision:</strong>
+          Created AWS infrastructure using Terraform.
+        </p>
+
+        <p>
+          <strong>02 — Connect:</strong>
+          Configured SSH and Ansible inventory.
+        </p>
+
+        <p>
+          <strong>03 — Automate:</strong>
+          Installed and enabled Apache on five servers.
+        </p>
+
+        <p>
+          <strong>04 — Deploy:</strong>
+          Published a custom website using Ansible.
+        </p>
+      </div>
+
+      <div>
+        <span class="tag">AWS</span>
+        <span class="tag">Terraform</span>
+        <span class="tag">Ansible</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Apache</span>
+        <span class="tag">Networking</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Brendon Ekoko | Cloud Engineering Portfolio
+    <br>
+    Built with AWS, Terraform, Ansible & Linux
+  </footer>
+</body>
+</html>
